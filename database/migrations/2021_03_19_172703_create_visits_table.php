@@ -18,6 +18,8 @@ class CreateVisitsTable extends Migration
             $table->string('ip');
             $table->string('continent_code');
             $table->string('country_code');
+            $table->string('browser');
+            $table->string('os');
             $table->timestamps();
         });
     }
