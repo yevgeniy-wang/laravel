@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVisitsTable extends Migration
+class AddUserAgentToVisitsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateVisitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('visits', function (Blueprint $table) {
-            $table->id();
-            $table->string('ip');
-            $table->string('continent_code');
-            $table->string('country_code');
-            $table->timestamps();
+        Schema::table('visits', function (Blueprint $table) {
+            $table->string('browser');
+            $table->string('os');
         });
     }
 
@@ -29,6 +26,8 @@ class CreateVisitsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('visits');
+        Schema::table('visits', function (Blueprint $table) {
+            $table->dropColumn(['browser', 'os']);
+        });
     }
 }
