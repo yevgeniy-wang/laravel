@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Visit;
-use App\Service\Geo\GeoServiceInterface;
-use App\Service\UserAgent\UserAgentServiceInterface;
-use UAParser\Parser;
+use Hillel\GeoInterface\GeoServiceInterface;
+use Hillel\UserAgentInterface\UserAgentServiceInterface;
 
 class GeoController
 {

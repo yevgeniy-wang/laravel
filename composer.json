@@ -9,14 +9,15 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
-        "donatj/phpuseragentparser": "^1.4",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
-        "geoip2/geoip2": "~2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "ua-parser/uap-php": "^3.9"
+        "yevgeniy/uaservice1": "^1.0.0",
+        "yevgeniy/uaservice2": "^1.0.0",
+        "yevgeniy/geoservice1": "^1.0.0",
+        "yevgeniy/geoservice2": "^1.0.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
@@ -62,5 +63,19 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/yevgeniy-wang/hillel-geo-service1"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/yevgeniy-wang/hillel-geo-service2"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/yevgeniy-wang/hillel-geo-interface"
+        }
+    ]
 }

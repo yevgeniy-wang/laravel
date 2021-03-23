@@ -2,12 +2,12 @@
 
 namespace App\Providers;
 
-use App\Service\Geo\GeoServiceInterface;
-use App\Service\Geo\IpApiService;
-use App\Service\Geo\MaxmindGeoService;
-use App\Service\UserAgent\DonatjParserService;
-use App\Service\UserAgent\UAParserService;
-use App\Service\UserAgent\UserAgentServiceInterface;
+use Hillel\GeoInterface\GeoServiceInterface;
+use Hillel\GeoService1\MaxmindGeoService;
+use Hillel\GeoService2\IpApiService;
+use Hillel\UserAgentInterface\UserAgentServiceInterface;
+use Hillel\UserAgentService1\UAParserService;
+use Hillel\UserAgentService2\DonatjParserService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -20,13 +20,13 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(GeoServiceInterface::class, function(){
-            return new IpApiService();
             // return new MaxmindGeoService();
+            return new IpApiService();
         });
 
         $this->app->singleton(UserAgentServiceInterface::class, function(){
-            //return new UAParserService();
-            return new DonatjParserService();
+            return new UAParserService();
+            // return new DonatjParserService();
         });
     }
 

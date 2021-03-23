@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e6eeec16491b53ec809102d4eea0fd5",
+    "content-hash": "936d0d833beea2f1fe77f8aefe958752",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5245,20 +5245,105 @@
             "time": "2021-03-09T10:59:23+00:00"
         },
         {
-            "name": "yevgeniy/uainterface",
-            "version": "dev-master",
+            "name": "yevgeniy/geointerface",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yevgeniy-wang/hillel-ua-interface.git",
-                "reference": "8ad4fe3410dca71d5d5ba11f7be3a6afdcc6ec37"
+                "url": "https://github.com/yevgeniy-wang/hillel-geo-interface.git",
+                "reference": "2f02a49aae22c037aee823ad258d9b770f2d4717"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yevgeniy-wang/hillel-ua-interface/zipball/8ad4fe3410dca71d5d5ba11f7be3a6afdcc6ec37",
-                "reference": "8ad4fe3410dca71d5d5ba11f7be3a6afdcc6ec37",
+                "url": "https://api.github.com/repos/yevgeniy-wang/hillel-geo-interface/zipball/2f02a49aae22c037aee823ad258d9b770f2d4717",
+                "reference": "2f02a49aae22c037aee823ad258d9b770f2d4717",
                 "shasum": ""
             },
-            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hillel\\GeoInterface\\": "./src"
+                }
+            },
+            "support": {
+                "source": "https://github.com/yevgeniy-wang/hillel-geo-interface/tree/v1.0.0",
+                "issues": "https://github.com/yevgeniy-wang/hillel-geo-interface/issues"
+            },
+            "time": "2021-03-23T19:47:57+00:00"
+        },
+        {
+            "name": "yevgeniy/geoservice1",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yevgeniy-wang/hillel-geo-service1.git",
+                "reference": "0785f042038e7bafcf9f658291e888aa40284605"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yevgeniy-wang/hillel-geo-service1/zipball/0785f042038e7bafcf9f658291e888aa40284605",
+                "reference": "0785f042038e7bafcf9f658291e888aa40284605",
+                "shasum": ""
+            },
+            "require": {
+                "geoip2/geoip2": "~2.0",
+                "yevgeniy/geointerface": "^1.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hillel\\GeoService1\\": "./src"
+                }
+            },
+            "support": {
+                "source": "https://github.com/yevgeniy-wang/hillel-geo-service1/tree/v1.0.1",
+                "issues": "https://github.com/yevgeniy-wang/hillel-geo-service1/issues"
+            },
+            "time": "2021-03-23T20:03:44+00:00"
+        },
+        {
+            "name": "yevgeniy/geoservice2",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yevgeniy-wang/hillel-geo-service2.git",
+                "reference": "77531162f222e58f908e7ff7a43a3211c9f8a1ec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yevgeniy-wang/hillel-geo-service2/zipball/77531162f222e58f908e7ff7a43a3211c9f8a1ec",
+                "reference": "77531162f222e58f908e7ff7a43a3211c9f8a1ec",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^v8.33.0",
+                "yevgeniy/geointerface": "^1.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hillel\\GeoService2\\": "./src"
+                }
+            },
+            "support": {
+                "source": "https://github.com/yevgeniy-wang/hillel-geo-service2/tree/v1.0.0",
+                "issues": "https://github.com/yevgeniy-wang/hillel-geo-service2/issues"
+            },
+            "time": "2021-03-23T20:25:29+00:00"
+        },
+        {
+            "name": "yevgeniy/uainterface",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yevgeniy-wang/hillel-ua-interface.git",
+                "reference": "3df1d8d2e712b203544a6924a9d0659933d6a88e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yevgeniy-wang/hillel-ua-interface/zipball/3df1d8d2e712b203544a6924a9d0659933d6a88e",
+                "reference": "3df1d8d2e712b203544a6924a9d0659933d6a88e",
+                "shasum": ""
+            },
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -5268,9 +5353,71 @@
             "notification-url": "https://packagist.org/downloads/",
             "support": {
                 "issues": "https://github.com/yevgeniy-wang/hillel-ua-interface/issues",
-                "source": "https://github.com/yevgeniy-wang/hillel-ua-interface/tree/master"
+                "source": "https://github.com/yevgeniy-wang/hillel-ua-interface/tree/v1.0.0"
             },
-            "time": "2021-03-23T18:19:40+00:00"
+            "time": "2021-03-23T19:07:48+00:00"
+        },
+        {
+            "name": "yevgeniy/uaservice1",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yevgeniy-wang/hillel-ua-service1.git",
+                "reference": "713ea83493e0f0425d9df885cddb2d955ddc9167"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yevgeniy-wang/hillel-ua-service1/zipball/713ea83493e0f0425d9df885cddb2d955ddc9167",
+                "reference": "713ea83493e0f0425d9df885cddb2d955ddc9167",
+                "shasum": ""
+            },
+            "require": {
+                "ua-parser/uap-php": "^3.9",
+                "yevgeniy/uainterface": "^1.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hillel\\UserAgentService1\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/yevgeniy-wang/hillel-ua-service1/issues",
+                "source": "https://github.com/yevgeniy-wang/hillel-ua-service1/tree/v1.0.1"
+            },
+            "time": "2021-03-23T19:23:45+00:00"
+        },
+        {
+            "name": "yevgeniy/uaservice2",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yevgeniy-wang/hillel-ua-service2.git",
+                "reference": "edfd1c5bc8c9a692b29ef7a99e6f3d1b968b5545"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yevgeniy-wang/hillel-ua-service2/zipball/edfd1c5bc8c9a692b29ef7a99e6f3d1b968b5545",
+                "reference": "edfd1c5bc8c9a692b29ef7a99e6f3d1b968b5545",
+                "shasum": ""
+            },
+            "require": {
+                "donatj/phpuseragentparser": "^1.4",
+                "yevgeniy/uainterface": "^1.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hillel\\UserAgentService2\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/yevgeniy-wang/hillel-ua-service2/issues",
+                "source": "https://github.com/yevgeniy-wang/hillel-ua-service2/tree/v1.0.1"
+            },
+            "time": "2021-03-23T19:37:58+00:00"
         }
     ],
     "packages-dev": [
@@ -7979,9 +8126,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "yevgeniy/uainterface": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
