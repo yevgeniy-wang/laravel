@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
         });
 
         $faker = Factory::create();
-        for ($i = 0; $i<1000 ; $i++)
+        for ($i = 0; $i<100 ; $i++)
         GeoUa::dispatch($faker->ipv4, $faker->userAgent)->onQueue('parsing');
     }
 }
