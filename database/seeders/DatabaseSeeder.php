@@ -2,11 +2,14 @@
 
 namespace Database\Seeders;
 
+use App\Jobs\GeoUa;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Faker\Factory;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,10 +30,12 @@ class DatabaseSeeder extends Seeder
 
         });
 
-
         $post->each(function ($post) use ($tags){
             $post->tags()->attach($tags->random(rand(5, 10))->pluck('id'));
         });
 
+        $faker = Factory::create();
+        for ($i = 0; $i<1000 ; $i++)
+        GeoUa::dispatch($faker->ipv4, $faker->userAgent)->onQueue('parsing');
     }
 }
